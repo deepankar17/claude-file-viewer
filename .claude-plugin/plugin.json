@@ -2,5 +2,9 @@
   "name": "file-viewer",
   "version": "0.2.2",
   "description": "Open any file on disk in a pane, including files outside the session's folders",
+  "author": { "name": "Deepankar Sarkar" },
+  "homepage": "https://github.com/deepankar17/claude-file-viewer",
+  "repository": "https://github.com/deepankar17/claude-file-viewer",
+  "license": "MIT",
   "types": "./types/index.d.ts"
 }

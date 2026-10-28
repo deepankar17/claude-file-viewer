@@ -1,5 +1,8 @@
 # file-viewer
 
+[![License: MIT](https://img.shields.io/github/license/deepankar17/claude-file-viewer)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/deepankar17/claude-file-viewer?style=social)](https://github.com/deepankar17/claude-file-viewer/stargazers)
+
 A Claude Code mod that opens any file on disk in a pane beside the chat, including the files the
 desktop app's own file pane refuses with "This file is outside this session's folders" (memory
 files under `~/.claude/projects/...`, for example).
@@ -59,3 +62,7 @@ Then run `/reload-plugins` in open sessions.
 claude plugin validate .
 claude plugin test .
 ```
+
+## License
+
+[MIT](LICENSE) © 2026 Deepankar Sarkar
