@@ -1,6 +1,7 @@
 import { expect, mock, test } from 'claude-code/testing'
 
 import { fileHref, frontmatterRows, pathFromHref, previewParts, readableValue } from '../hooks/markdown'
+import { readError } from '../hooks/read-error'
 
 const PANE = {
   plugin: 'file-viewer',
@@ -150,6 +151,14 @@ test('Source shows the raw text; open_file shows code and refuses a missing file
 
   const missing = await $.tool.call({ tool: 'mcp__file-viewer__open_file', path: 'C:/nope.md' })
   expect(missing.text ?? missing.deny).toMatch(/Could not read C:\/nope.md/)
+})
+
+test('a failed read says what went wrong in words, not an errno', async () => {
+  const failed = (code: string) => new Error(`file-viewer: $.fs.read(C:\\gone\\a.md) failed: ${code}`)
+  expect(readError(failed('ENOENT'))).toMatch(/^The file is not there any more/)
+  expect(readError(failed('EPERM'))).toMatch(/permission/)
+  expect(readError(failed('EISDIR'))).toBe('This is a folder, not a file.')
+  expect(readError(new Error('too large'))).toBe('too large')
 })
 
 test('the bar has no path field, lists recent files from the last session, opens them, and hides', async ($, on) => {

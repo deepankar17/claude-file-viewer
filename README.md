@@ -12,6 +12,18 @@ files under `~/.claude/projects/...`, for example).
 - **Slate palette** that follows the app's light or dark theme.
 - `/view-file <path>` opens any file; you can also ask Claude to open one (the `open_file` tool).
 
+The Files bar above the prompt:
+
+![The Files bar above the prompt](docs/screenshots/bar.png)
+
+A markdown file, its frontmatter shown as a properties card:
+
+![A markdown file in the pane](docs/screenshots/file-pane.png)
+
+The files Claude touched in this session, narrowed by the filter:
+
+![The session's files](docs/screenshots/files-list.png)
+
 ## Install
 
 At the prompt of a Claude Code terminal session:

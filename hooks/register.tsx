@@ -4,6 +4,7 @@ import type { EngineInterface, Register } from 'claude-code'
 import type { OpenedFile, SessionFile } from '../types'
 import { fileHref, pathFromHref, previewParts, splitFrontmatter, wikiNames } from './markdown'
 import { paletteFor } from './palette'
+import { readError } from './read-error'
 
 const PANE = 'file-viewer'
 const COMMAND = 'view-file'
@@ -95,9 +96,7 @@ const load = async ($: EngineInterface, path: string): Promise<OpenedFile> => {
 
     return { path, text: shown, isCut, error: null, links }
   } catch (err) {
-    const error = err instanceof Error ? err.message : String(err)
-
-    return { path, text: '', isCut: false, error, links: {} }
+    return { path, text: '', isCut: false, error: readError(err), links: {} }
   }
 }
 
