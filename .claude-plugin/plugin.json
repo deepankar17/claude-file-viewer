@@ -1,0 +1,6 @@
+{
+  "name": "file-viewer",
+  "version": "0.2.1",
+  "description": "Open any file on disk in a pane, including files outside the session's folders",
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "claude-file-viewer",
+  "owner": { "name": "Deepankar Sarkar" },
+  "plugins": [{ "name": "file-viewer", "source": "./" }]
+}
