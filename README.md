@@ -9,6 +9,9 @@ A Claude Code mod that opens any file on disk in a pane beside the chat, includi
 desktop app's own file pane refuses with "This file is outside this session's folders" (memory
 files under `~/.claude/projects/...`, for example).
 
+That message does not mean the file is gone. It is still on disk, only hidden from the app's pane:
+open it here with one click from the Files bar, or with `/view-file <path>`.
+
 - **Files bar** above the prompt: `Files (N)` lists every file Claude read, edited or wrote in this
   session, and your recently opened files are one click away. `Hide` tucks the bar away;
   `/view-file` brings it back.
