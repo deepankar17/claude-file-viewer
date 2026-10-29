@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/github/license/deepankar17/claude-file-viewer)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/deepankar17/claude-file-viewer?style=social)](https://github.com/deepankar17/claude-file-viewer/stargazers)
+[![Sponsor](https://img.shields.io/github/sponsors/deepankar17?label=Sponsor&logo=github)](https://github.com/sponsors/deepankar17)
 
 A Claude Code mod that opens any file on disk in a pane beside the chat, including the files the
 desktop app's own file pane refuses with "This file is outside this session's folders" (memory
